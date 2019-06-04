@@ -1,6 +1,7 @@
 package au.gov.border.oa.runjunit.features.student;
 
 import au.gov.border.oa.steps.LoginSteps;
+import com.applitools.eyes.FileLogger;
 import com.applitools.eyes.RectangleSize;
 import com.applitools.eyes.selenium.Eyes;
 import net.serenitybdd.junit.runners.SerenityRunner;
@@ -30,8 +31,11 @@ public class StudentEyesSerenity {
 
     @Before
     public void before() {
+        driver.manage().window().maximize();
         eyes = new Eyes();
         eyes.setApiKey("RZ8gdnlt105ewIL3OpvGARWpWlLNDdHwt98HkZmnQtunZU110");
+        eyes.setLogHandler(new FileLogger(System.getProperty("user.dir") + "\\log\\applitools.log", true, true));
+//        eyes.setLogHandler(new StdoutLogHandler(true));
         eyes.open(((WebDriverFacade) driver).getProxiedDriver(), "Serenity Eyes", name.getMethodName(), new RectangleSize(800, 600));
     }
 
