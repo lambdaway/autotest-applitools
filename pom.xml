@@ -15,7 +15,7 @@
     <serenity.maven.version>1.9.9</serenity.maven.version>
     <serenity.cucumber.version>1.9.5</serenity.cucumber.version>
     <serenity.junit.version>1.9.9</serenity.junit.version>
-    <junit.version>4.12</junit.version>
+    <junit.version>4.13.1</junit.version>
     <webdriver.driver>chrome</webdriver.driver>
     <webdriver.base.url>http://javawiki:8080/display/SDLC/Our+Applications</webdriver.base.url>
     <system.under.test>wcomp</system.under.test>
